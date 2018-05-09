@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>DATE OF BIRTH</title>
+</head>
+<body>
+    <form>
+<input type="number" id="input1"/>
+<input type="number" id="input2"/>
+<input type="number" id="input3"/>
+<p> Date Format</p>
+<input type="number" id="input4"/>
+<input type="number" id="input5"/>
+<input type="number" id="input6"/>
+
+
+<div id="result"></div>
+<div id="result2"></div>
+
+
+        </form>
+<h1>Javascript</h1>
+<h2>Age checker</h2>
+<input type="button" id="answer2" value="CurrentAge" />
+<input type="button" id="answer3" value="FutureAge" />
+
+
+
+
+<script>
+
+
+    document.getElementById("answer2").addEventListener ('click', currentage);
+    function currentage () {
+
+
+ var dayofbirth = parseInt(document.getElementById("input1").value);
+ var monthofbirth = parseInt(document.getElementById("input2").value);
+ var yearofbirth = parseInt(document.getElementById("input3").value);
+ var today = new Date();
+ var yyyy = parseInt(today.getFullYear());
+ var age = (yyyy - yearofbirth);
+ document.getElementById("result").innerHTML = age;
+    }
+// -------------------------------------------------------------------------
+    document.getElementById("answer3").addEventListener ('click', Format);
+    function Format (){
+
+
+var fday = parseInt(document.getElementById("input4").value);
+var fmonth = parseInt(document.getElementById("input5").value);
+var fyear = parseInt(document.getElementById("input6").value);
+
+var today = new Date();
+var dd = parseInt(today.getDate());
+var mm = parseInt(today.getMonth()+1); //January is 0!
+var yyyy = parseInt(today.getFullYear());
+
+var dayofbirth = parseInt(document.getElementById("input1").value);
+ var monthofbirth = parseInt(document.getElementById("input2").value);
+ var yearofbirth = parseInt(document.getElementById("input3").value);
+
+var DayEnd = ( fday - dayofbirth);
+var MonthEnd = ( fmonth - monthofbirth);
+var YearEnd = ( fyear - yearofbirth);
+
+if (DayEnd>30){
+            var MonthEnd +1;
+        }
+
+else if (MonthEnd>11) {
+            var YearEnd +1;
+}
+
+
+var futureage = (YearEnd + "/" + MonthEnd + "/" + DayEnd);
+
+
+document.getElementById("result2").innerHTML = (YearEnd + "/" + MonthEnd + "/" + DayEnd);
+    }
+
+</script>
+</body>
+</html>

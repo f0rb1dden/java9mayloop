@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Conditional Test</p>
+<form>
+<input type="number" id="input1"/>
+
+
+</form>
+<div><button id="button1">Test !</button></div>
+<div id="demo"></div>
+
+<script>
+
+
+
+    document.getElementById("button1").addEventListener ('click', ending);
+    function ending (){
+        var firstnumber = parseInt(document.getElementById("input1").value);
+
+        if (firstnumber < 10){
+            document.getElementById("demo").innerHTML = "number entered less than 10";
+
+        }
+        else if (firstnumber >10){
+            document.getElementById("demo").innerHTML = "number entered more than 10";
+        }
+        else (firstnumber);
+
+
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

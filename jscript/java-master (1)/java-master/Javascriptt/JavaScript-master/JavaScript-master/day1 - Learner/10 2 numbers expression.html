@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Please enter 2 numbers below</p>
+<form>
+<input type="number" id="input1"/>
+<input type="number" id="input2"/>
+
+</form>
+<div><button id="button1">Number</button></div>
+<div id="demo"></div>
+
+<script>
+
+
+
+    document.getElementById("button1").addEventListener ('click', thefinalend);
+    function thefinalend () {
+
+  var firstnumber = parseInt(document.getElementById("input1").value);
+
+  var secondnumber = parseInt(document.getElementById("input2").value);
+
+
+        if (firstnumber > 10 && secondnumber > 10){
+document.getElementById("demo").innerHTML = firstnumber && secondnumber;
+        }
+        else if (firstnumber > 10 && secondnumber < 10){
+document.getElementById("demo").innerHTML = firstnumber;
+        }
+        else if (firstnumber < 10 && secondnumber > 10){
+        }
+document.getElementById("demo").innerHTML = secondnumber;
+            else (firstnumber && secondnumber);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

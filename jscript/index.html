@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>DATE OF BIRTH</title>
+</head>
+<body>
+    <form>
+<input type="number" id="input1"/>
+<input type="number" id="input2"/>
+<input type="number" id="input3"/>
+
+<div id="result"></div>
+
+
+        </form>
+<h1>Javascript</h1>
+<h2>Age checker</h2>
+<input type="button" id="answer2" value="Answer" />
+
+
+
+
+
+<script>
+
+
+    document.getElementById("answer2").addEventListener ('click', currentage);
+    function currentage () {
+
+
+ var dayofbirth = parseInt(document.getElementById("input1").value);
+ var monthofbirth = parseInt(document.getElementById("input2").value);
+ var yearofbirth = parseInt(document.getElementById("input3").value);
+ var today = new Date();
+ var yyyy = parseInt(today.getFullYear());
+ var age = (yyyy - yearofbirth);
+ document.getElementById("result").innerHTML = age;
+    }
+
+</script>
+</body>
+</html>

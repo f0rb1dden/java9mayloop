@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<form>
+<input type="text" id="input1"/>
+</form>
+<div><button id="button1">Button</button></div>
+<div id="demo"></div>
+
+<script>
+    
+    document.getElementById("button1").addEventListener('click', returnValue); 
+    function returnValue(){
+        var usersInput = document.getElementById("input1").value;
+        
+        document.getElementById("demo").innerHTML = usersInput;
+    }
+        
+     
+</script>
+</body>
+</html>
